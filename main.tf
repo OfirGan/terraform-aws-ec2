@@ -142,13 +142,6 @@ resource "aws_instance" "nginx_web_servers" {
     device_index         = 0
   }
 
-  connection {
-    type        = "ssh"
-    host        = self.public_ip
-    user        = "ubuntu"
-    private_key = file(var.private_key_path)
-  }
-
   tags = {
     Name    = "${var.purpose_tag}-web-srv-${count.index + 1}"
     Owner   = var.owner_tag

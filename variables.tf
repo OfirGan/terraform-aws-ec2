@@ -53,10 +53,6 @@ variable "instance_type_web" {
   type        = string
 }
 
-variable "private_key_path" {
-  default = "C:\\Downloads\\OpsSchool\\Private-Keys\\ec2-key-pair.pem"
-}
-
 variable "key_name" {
-  default = "ec2-key-pair"
+  description = "AWS EC2 Key pair Name"
 }
